@@ -1,0 +1,160 @@
+<!-- Question 1: Exploring New HTML5 Input Types -->
+
+
+<!-- Question 2: Building a Comprehensive Web Form -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+</head>
+
+<body style="background-color: rgb(196,174,173)">
+    <h1 style=" color: #1d2951;">Sign-Up Form</h1>
+    <form action="/sign_up" method="post">
+
+        <fieldset>
+
+            <legend style="color: #3b444b;">Basic Information</legend>
+
+            <label style="color: #3b444b;" for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" aria-label="Full-Name" required>
+
+            <!-- Task 1: Implementing Email Input -->
+            <label style="color: #3b444b;" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter a valid email" aria-label="Email" required>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <legend style="color: #3b444b;">Free Sign-Up Gift</legend>
+
+            <h4 style="color: #3b444b;">Request (up to Five) Free Gifts</h4>
+            <!-- Task 2: Utilizing Number Input -->
+            <label style="color: #3b444b;" for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" step="1" aria-label="Quantity">
+            <button type="submit">Submit</button>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <legend style="color: #3b444b;">Sign-Up Date</legend>
+
+            <!-- Task 3: Employing Date Input -->
+            <label style="color: #3b444b;" for="sign-up-date">Quantity:</label>
+            <input type="date" id="sign-up-date" name="sign-up-date" aria-label="Sign-Up-Date" required>
+            <button type="submit">Submit</button>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <legend style="color: #3b444b;">Rate Our Product</legend>
+
+            <h5 style="color: #3b444b;">Rate user experience from 1 to 10</h5>
+            <!-- Task 2: Utilizing Number Input -->
+            <label style="color: #3b444b;" for="rating">Rating (between 1 and 10):</label>
+            <!-- Task 4: Enhancing User Experience with Range Input -->
+            <input type="range" style="accent-color: #5d8aa8"name="weight" id="range_weight" value="5" min="1" max="10" oninput="range_weight_disp.value = range_weight.value" aria-label="Rating">
+                <output  id="range_weight_disp"></output>
+            <button type="submit">Submit</button>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <!-- Task 5(BONUS): Capturing Color with Color Input -->
+            <legend style="color: #3b444b;">Desired Color</legend>
+
+            <h5 style="color: #3b444b;">Select desired color</h5>
+
+            <label style="color: #3b444b;" for="color">Color:</label>
+            <input type="color" id="color" name="color"  placeholder="Color" value="#5d8aa8" aria-label="Desired-Color">
+            <br><br>
+            <input type="submit">
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <legend style="color: #3b444b;">Programming Languages</legend>
+
+            <h5 style="color: #3b444b;">Select your favorite programming language</h5>
+
+            <label style="color: #3b444b;" for="color">Favorite Programming Language:</label>
+            <!-- Task 1: Creating a Selection Experience -->
+            <select name="programming-languages" id="programming-languages" aria-label="Favorite-Programming-Language">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="SQL">SQL</option>
+                <option value="React">React</option>
+                <option value="C++">C++</option>
+                <option value="Ruby">Ruby</option>
+                <option value="C#">C#</option>
+            </select>
+            <br><br>
+            <input type="submit">
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <legend style="color: #3b444b;">Expertise</legend>
+
+            <h5 style="color: #3b444b;">Describe level of programming expertise</h5>
+            
+            <!-- Task 2: Improving Accessibility -->
+            <input type="radio" id="beginner" name="expertise" value="beginner" aria-label="Beginner" required>
+            <label for="beginner">Beginner</label>
+
+            <input type="radio" id="intermediate" name="expertise" value="intermediate" aria-label="Intermediate" required>
+            <label for="intermediate">Intermediate</label>
+
+            <input type="radio" id="advanced" name="expertise" value="advanced" aria-label="Advanced" required>
+            <label for="advanced">Advanced</label>
+            <br><br>
+            <input type="submit">
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+
+            <legend style="color: #3b444b;">Platforms</legend>
+
+            <h5 style="color: #3b444b;">Preferred development platform</h5>
+
+            <input type="checkbox" id="Web" name="Web" value="Web" aria-label="Web">
+            <label for="Web">Web</label>
+
+            <input type="checkbox" id="Mobile" name="Mobile" value="Mobile" aria-label="Mobile">
+            <label for="Mobile">Mobile</label>
+
+            <input type="checkbox" id="Desktop" name="Desktop" value="Desktop" aria-label="Desktop">
+            <label for="Desktop">Desktop</label>
+            <br><br>
+            <input type="reset">
+            <input type="submit">
+
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
